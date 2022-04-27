@@ -50,19 +50,19 @@ function userlvlinput() {
                 var current2 = data2[i];
 
                 var span = document.createElement('span');
-                var h3 = document.createElement('h3');
-                h3.className = "card-title";
-                h3.textContent = current2.name;
+                var h2 = document.createElement('h2');
+                h2.className = "card-title";
+                h2.textContent = current2.name;
                 span.className = 'result-card';
-                span.append(h3);
+                span.append(h2);
                 var img = document.createElement('img');
                 img.className = 'card-image';
                 img.setAttribute('src', `${current2.img}`);
                 span.append(img);
-                var h2 = document.createElement('h2');
-                h2.className = "card-level";
-                h2.textContent = current2.level;
-                span.append(h2);
+                var h4 = document.createElement('h4');
+                h4.className = "card-level";
+                h4.textContent = `Level: ${current2.level}`;
+                span.append(h4);
                 results.append(span);
             }
         

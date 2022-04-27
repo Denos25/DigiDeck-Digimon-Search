@@ -8,7 +8,7 @@ body {
   }
   
   #main {
-    width: 800px;
+    width: 850px;
     font-family: " Trebuchet MS	";
     background-color: black;
     opacity: 80%;
@@ -21,7 +21,6 @@ body {
   
   #results {
     width: 700px;
-    background-color: rgb(0, 107, 140);
     margin: auto;
     margin-top: 30px;
     border-radius: 20px;
@@ -36,4 +35,23 @@ body {
     padding: 20px;
     margin: 10px;
     display: inline-block;
+  }
+  #user-section {
+    width: 300px;
+    background-color: SteelBlue;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+  }
+
+  #user-section2 {
+    width: 300px;
+    background-color: SteelBlue;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block; 
   }
