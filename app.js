@@ -1,5 +1,5 @@
+//Search by name
 const searchBtn = document.getElementById('submit')
-
 searchBtn.addEventListener("click", userinput)
 function userinput() {
     const inputText = document.querySelector('input').value;
@@ -15,19 +15,19 @@ function userinput() {
                 var current = data[i];
 
                 var span = document.createElement('span');
-                var h3 = document.createElement('h3');
-                h3.className = "card-title";
-                h3.textContent = current.name;
+                var h2 = document.createElement('h2');
+                h2.className = "card-title";
+                h2.textContent = current.name;
                 span.className = 'result-card';
-                span.append(h3);
+                span.append(h2);
                 var img = document.createElement('img');
                 img.className = 'card-image';
                 img.setAttribute('src', `${current.img}`);
                 span.append(img);
-                var h2 = document.createElement('h2');
-                h2.className = "card-level";
-                h2.textContent = current.level;
-                span.append(h2);
+                var h4 = document.createElement('h4');
+                h4.className = "card-level";
+                h4.textContent = `Level: ${current.level}`;
+                span.append(h4);
                 results.append(span);
             }
         }
@@ -35,6 +35,7 @@ function userinput() {
     })
 
 }
+//Search by Level
 const searchlvlBtn = document.getElementById('levelSubmit')
 searchlvlBtn.addEventListener("click", userlvlinput)
 
@@ -68,3 +69,14 @@ function userlvlinput() {
     })
 
 }
+//site logo 
+var img = document.createElement("img");
+img.src = "images/logo.png";
+img.width = "500";
+img.height = "300";
+var src = document.getElementById("header");
+src.appendChild(img);
+
+//Footer align center
+var footer = document.getElementById("footer");
+footer.style.textAlign = "center";
