@@ -55,3 +55,34 @@ body {
     margin: 10px;
     display: inline-block; 
   }
+
+  #user-section3 {
+    width: 300px;
+    background-color: SteelBlue;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block; 
+  }
+
+  .card-number {
+    font-style: italic;
+    background-color: rgb(2, 163, 216);
+  }
+  
+  .card-level{
+    background-color: rgb(18, 45, 66);
+    color: white;
+    text-align: center;
+
+  }
+  .card-color {
+    width: 400px;
+    text-align: center;
+
+  }
+  .card-effect {
+    background-color: LightSteelBlue;
+    width: 600px;
+  }

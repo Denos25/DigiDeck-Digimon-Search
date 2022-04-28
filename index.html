@@ -18,13 +18,13 @@
         </div>
          <h1>DigiDeck Digimon Database</h1>
         <div id="user-section">
-            <h3>Search by Name:</h3>
+            <h3>Search Digimon by Name:</h3>
             <input type="text" name='search'>
             <button id="submit">Search</button>
         </div>
         <div id="user-section2">
-            <h3>Search by Level:</h3>
-            <label for="Digilevels">Choose a Level:</label>
+            <h3>Search Digimons by stage:</h3>
+            <label for="Digilevels">Choose a stage:</label>
             <select name="levels" id="levelSelect">
                 <option value="Fresh">Fresh</option>
                 <option value="Training">Training</option>
@@ -34,6 +34,19 @@
                 <option value="Mega">Mega</option>
             </select>
             <input type="submit" id="levelSubmit" value="Search">
+        </div>
+        <div id="user-section3">
+            <h3>Search Digimon TCG:</h3>
+            <input type="text" name='search'>
+            <label for="Digitypes"></label>
+            <select name="type" id="typeSelect">
+                <option value="Digimon">Digimon</option>
+                <option value="Option">Option</option>
+                <option value="Tamer">Tamer</option>
+                <option value="Digi-Egg">Digi-Egg</option>
+            </select>
+            <br> </br>
+            <button id="TCGSubmit">Search</button>
         </div>
         <div id="results">
         </div>
