@@ -68,6 +68,7 @@ body {
 
   .card-number {
     font-style: italic;
+    font-family: sans-serif;
     background-color: rgb(2, 163, 216);
   }
   
@@ -79,10 +80,16 @@ body {
   }
   .card-color {
     width: 400px;
+    font-family: sans-serif;
     text-align: center;
 
   }
   .card-effect {
     background-color: LightSteelBlue;
+    font-family: sans-serif;
     width: 600px;
+  }
+
+  .card-title {
+    font-family: sans-serif;
   }

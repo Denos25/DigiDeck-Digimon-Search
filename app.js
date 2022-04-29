@@ -1,14 +1,14 @@
-//Search by name
+//Search digimon by name
 const searchBtn = document.getElementById('submit')
 searchBtn.addEventListener("click", userinput)
 function userinput() {
     const inputText = document.querySelector('input').value;
-    $.get(`https://digimon-api.vercel.app/api/digimon/name/${inputText}`, function (data) {
-        if (inputText === "") {
-            alert("Please input a Digimon name!");
-        }
-        else {
-            console.log(data);
+    if (inputText === "") {
+        alert("Please input a Digimon name!");
+        console.log(inputText);
+    }
+    else {
+        $.get(`https://digimon-api.vercel.app/api/digimon/name/${inputText}`, function (data) {
             var results = document.querySelector('#results');
             results.innerHTML = "";
             for (var i = 0; i < data.length; i++) {
@@ -30,42 +30,40 @@ function userinput() {
                 span.append(h4);
                 results.append(span);
             }
-        }
-
-    })
-
+        })
+    }
 }
-//Search by Level
+//Search digimons by stage
 const searchlvlBtn = document.getElementById('levelSubmit')
 searchlvlBtn.addEventListener("click", userlvlinput)
 
 function userlvlinput() {
     const inputLevel = document.getElementById("levelSelect").value;
     $.get(`https://digimon-api.vercel.app/api/digimon/level/${inputLevel}`, function (data2) {
-   
-            console.log(data2);
-            var results = document.querySelector('#results');
-            results.innerHTML = "";
-            for (var i = 0; i < data2.length; i++) {
-                var current2 = data2[i];
 
-                var span = document.createElement('span');
-                span.className = 'result-card';
-                var h2 = document.createElement('h2');
-                h2.className = "card-title";
-                h2.textContent = current2.name;
-                span.append(h2);
-                var img = document.createElement('img');
-                img.className = 'card-image';
-                img.setAttribute('src', `${current2.img}`);
-                span.append(img);
-                var h4 = document.createElement('h4');
-                h4.className = "card-level";
-                h4.textContent = `Stage: ${current2.level}`;
-                span.append(h4);
-                results.append(span);
-            }
-        
+        console.log(data2);
+        var results = document.querySelector('#results');
+        results.innerHTML = "";
+        for (var i = 0; i < data2.length; i++) {
+            var current2 = data2[i];
+
+            var span = document.createElement('span');
+            span.className = 'result-card';
+            var h2 = document.createElement('h2');
+            h2.className = "card-title";
+            h2.textContent = current2.name;
+            span.append(h2);
+            var img = document.createElement('img');
+            img.className = 'card-image';
+            img.setAttribute('src', `${current2.img}`);
+            span.append(img);
+            var h4 = document.createElement('h4');
+            h4.className = "card-level";
+            h4.textContent = `Stage: ${current2.level}`;
+            span.append(h4);
+            results.append(span);
+        }
+
     })
 
 }
@@ -100,6 +98,7 @@ function userTCGinput() {
                 var img = document.createElement('img');
                 img.className = 'card-image';
                 img.setAttribute('src', `${current.image_url}`);
+                img.href = `${current.image_url}`;
                 span.append(img);
                 if (current.stage !== null) {
                     var h4 = document.createElement('h3');
@@ -122,12 +121,16 @@ function userTCGinput() {
                     cardEffect.innerHTML = `Main Effect: ${current.maineffect}`;
                     span.append(cardEffect);
                 }
-                
+                else if (current.soureeffect !== null) {
+                    cardEffect.innerHTML = `Inherited/Security Effect: ${current.soureeffect}`;
+                    span.append(cardEffect);
+                }
+
                 results.append(span);
             }
         }
     })
-    
+
 
 }
 //site logo 
