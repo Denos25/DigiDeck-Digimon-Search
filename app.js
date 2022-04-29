@@ -96,9 +96,8 @@ function userTCGinput() {
                 cardNumber.textContent = `Card Number: ${current.cardnumber}`;
                 span.append(cardNumber);
                 var img = document.createElement('img');
-                img.className = 'card-image';
+                img.className = 'card-image2';
                 img.setAttribute('src', `${current.image_url}`);
-                img.href = `${current.image_url}`;
                 span.append(img);
                 if (current.stage !== null) {
                     var h4 = document.createElement('h3');
