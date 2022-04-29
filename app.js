@@ -84,7 +84,7 @@ function userTCGinput() {
             results.innerHTML = "";
             for (var i = 0; i < data3.length; i++) {
                 var current = data3[i];
-
+                
                 var span = document.createElement('span');
                 span.className = 'result-card';
                 var h2 = document.createElement('h2');
